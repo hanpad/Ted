@@ -40,12 +40,16 @@ public class XDoTool implements IDoTool {
 
     @Override
     public void mouseWheelUp() {
-        exec("click 4" );
+        exec("click 4 " + getWheelDelay());
     }
 
     @Override
     public void mouseWheelDown() {
-        exec("click 5" );
+        exec("click 5 " + getWheelDelay());
+    }
+
+    private String getWheelDelay() {
+        return "--delay 1";
     }
 
     @Override
